@@ -2,16 +2,14 @@
 
 ## Working in this repo
 
-After cloning, the `tools` submodule needs its SSH transport configured before any fetch or push will work. Run this first:
+Run the git setup script before doing any work in the `tools` submodule — it configures local performance settings that make git status and diff significantly faster on large repos:
 
 ```bash
-bash scripts/setup-ssh.sh
+bash scripts/setup-git.sh
 ```
-
-The script sets `core.sshCommand` on the submodule so it routes through the project SSH wrapper. Without it, submodule operations will fall back to the system SSH and fail against private remotes.
 
 ## Common tasks
 
 - **Full bootstrap**: `bash scripts/init.sh`
-- **SSH only**: `bash scripts/setup-ssh.sh`
+- **Git settings only**: `bash scripts/setup-git.sh`
 - **Update tools**: `git submodule update --remote tools`
