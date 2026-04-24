@@ -1,0 +1,9 @@
+[core]
+	autocrlf = input
+	editor = vim
+
+[push]
+	default = current
+
+[pull]
+	rebase = true
